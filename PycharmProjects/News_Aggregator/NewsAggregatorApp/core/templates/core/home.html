@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COVID19NEWS</title>
+    <style>
+        * {
+            margin: 0;
+            position: center;
+            font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+            box-sizing: border-box;
+         }
+         h1 {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+            font-size: 30px;
+        }
+        p.small {
+            line-height: 0.7;
+        }
+        .serif {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="jumbotron">
+        <center><h1>Covid-19 News India</h1>
+
+        </center>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <h3 class="text-centre"> News from Times of india</h3>
+                    {% for n in toi_news %}
+                    <h4> -  {{n}} </h4>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <h3 class="text-centre"> News from The Indian Express</h3>
+            {% for n in tie_news %}
+                <h4> -  {{n}} </h4>
+                <hr>
+                {% endfor %}
+                <br>
+        </div>
+    </div>
+
+</body>
+</html>
+
